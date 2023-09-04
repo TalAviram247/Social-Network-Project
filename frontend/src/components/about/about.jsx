@@ -11,7 +11,7 @@ export const About = () => {
       <div className="card">
         <h1>About us</h1>
         <p>
-          Welcome to the virtual hub where connections flourish and
+          Welcome to VirtualHub where connections flourish and
           relationships evolve. We believe in the power of bringing people
           together, transcending distances and fostering meaningful interactions
           in the digital age.

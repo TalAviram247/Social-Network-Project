@@ -14,20 +14,43 @@ export const Readme = () => {
   return (
     <div id="readme">
       <h1 className="title">Read me</h1>
-      <Box width={400} py={3}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem doloribus
-        veritatis optio nobis! Odit deserunt vero sequi repellat mollitia sunt
-        fuga non delectus, ducimus, libero magni cumque, ut harum. At ullam
-        eaque animi aliquid, assumenda consequatur dolorum iure ipsum veniam
-        temporibus accusantium maiores quam doloremque soluta ipsam ad ut
-      </Box>
-      <Box width={400} py={3}>
-        reprehenderit veritatis enim eos labore commodi provident eius? Itaque
-        quod laboriosam eos voluptatibus eligendi ratione, soluta enim, libero
-        autem quia aut odio! Nesciunt corrupti, minima sit nobis corporis
-        numquam natus libero repellendus dicta voluptate consectetur totam eius
-        sint quia dolore fugit facere maiores cum odio suscipit? Sunt dolores
-        totam placeat exercitationem?
+      <Box width={500} py={3}>
+        <br />
+        <h2>Social Network Name</h2>
+        <br />
+        <div>
+          <p>VirtualHub</p>
+        </div>
+
+        <br />
+        <h4>Additional Pages</h4>
+        <div>
+          <p>1. About Us</p>
+          <p>2. Contact Us</p>
+          
+        </div>
+
+        <br />
+        <h4>Additional Features</h4>
+        <div>
+          <p>1. Delete Your Own Post</p>
+          <p>2. Unlike Post</p>
+          <p>3. Enhanced User Search (enhanced search functionality, allowing users to search for other members by substrings, not just limited to prefix searches.)</p>
+
+        </div>
+
+        <br />
+        <h4>Challenges Faced</h4>
+        <div>
+          <p>1. Its the first time im building such a big project.</p>
+          <p>2. I had to familiarize myself with new technologies and architectures.</p>
+          <p>3. I had to work without a partner, which was challenging.</p>
+          
+        </div>
+
+        <br />
+        <h4>I had no partner</h4>
+        
       </Box>
 
       <Box width={400} py={3}>
