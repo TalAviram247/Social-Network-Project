@@ -53,9 +53,11 @@ export const Readme = () => {
         
       </Box>
 
-      <Box width={400} py={3}>
+      <Box width={550} py={3}>
         <br />
         <h2>Server routes</h2>
+        <br />
+        <h3>Execute "npm test" in the backend directory to run tests</h3>
         <br />
         <h4>Contact Routes:</h4>
         <div>
