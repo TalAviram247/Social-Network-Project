@@ -1,0 +1,48 @@
+#signup {
+  max-height: 95vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .form {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 80px 30px;
+    border-radius: 15px;
+
+    & .error {
+      color: darkred;
+      font-size: 14px;
+      margin-top: 3px;
+    }
+  }
+
+  .title {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #0277bd;
+    font-weight: 700;
+    font-size: 40px;
+    padding: 10px 0;
+  }
+
+  .button {
+    outline: none;
+    color: white;
+    opacity: 0.7;
+    margin-top: 5px;
+  }
+
+  .text {
+    color: #0277bd;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 0;
+    display: inline;
+    margin: 10px;
+  }
+}
