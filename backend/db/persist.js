@@ -41,6 +41,10 @@ const user = {
       };
     });
   },
+  getAllContactForms: function () {
+    return data.contactForms;
+  },
+
   editUser: (user) => {
     const index = data.users.findIndex((u) => u.username === user.username);
     data.users[index] = user;

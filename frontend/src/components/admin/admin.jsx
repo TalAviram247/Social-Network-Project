@@ -49,8 +49,9 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
-export const Admin = ({ users, getUsers, settings, setSettings }) => {
+export const Admin = ({ users, getUsers, settings, setSettings, contactForms }) => {
   const [expanded, setExpanded] = useState("panel1");
+  const [expandedContactForms, setExpandedContactForms] = useState("contactFormPanel1");
   useAuth().enforceAdmin();
 
   const deleteUser = async (username) => {
@@ -79,6 +80,10 @@ export const Admin = ({ users, getUsers, settings, setSettings }) => {
     }
   };
 
+  const handleContactFormChange = (panel) => (event, newExpanded) => {
+    setExpandedContactForms(newExpanded ? panel : false);
+  };
+
   return (
     <Box id="admin" px={5}>
       <Box display={"grid"} justifyContent={"center"} p={4}>
@@ -105,6 +110,9 @@ export const Admin = ({ users, getUsers, settings, setSettings }) => {
             label="Users can delete their own post"
           />
         </Box>
+        <br />
+        <h2>Users activity and deletion :</h2>
+        <br />
         {users.map((user) => {
           return (
             <Accordion
@@ -142,6 +150,32 @@ export const Admin = ({ users, getUsers, settings, setSettings }) => {
                         );
                       })
                     : "No activity"}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          );
+        })}
+        <br />
+        <h2>Contact-Us messages:</h2>
+        <br />
+        {contactForms.map((contactForm, index) => {
+          return (
+            <Accordion
+              key={index} // You should use a unique key for each accordion
+              expanded={expandedContactForms === `contactFormPanel${index + 1}`}
+              onChange={handleContactFormChange(`contactFormPanel${index + 1}`)}
+            >
+              <AccordionSummary
+                aria-controls={`contactFormPanel${index + 1}-content`}
+                id={`contactFormPanel${index + 1}-header`}
+              >
+                <Typography>
+                  Title: {contactForm.title}, Email: {contactForm.email}
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  {contactForm.message}
                 </Typography>
               </AccordionDetails>
             </Accordion>
