@@ -61,7 +61,7 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [!!user]);
 
-  console.log("user", user);
+  // console.log("user", user);
   const followingPosts = user?.following
     ? posts.filter(
         (post) =>
