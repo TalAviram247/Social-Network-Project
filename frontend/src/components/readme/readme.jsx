@@ -61,7 +61,8 @@ export const Readme = () => {
         <br />
         <h4>Contact Routes:</h4>
         <div>
-          <p>POST /contacts</p>
+          <p>POST /contact</p>
+          <p>GET /contact</p>
         </div>
 
         <br />

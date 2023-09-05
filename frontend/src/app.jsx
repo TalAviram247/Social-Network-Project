@@ -16,6 +16,7 @@ import { Readme } from "./components/readme/readme";
 function App() {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
+  const [contactForms, setContactForms] = useState([]);
   const [settings, setSettings] = useState({
     canDeleteOwnPost: false,
     canUnlikePost: false,
@@ -28,6 +29,13 @@ function App() {
       posts.map((post) => {
         return { ...post, createdAt: new Date(post.createdAt) };
       })
+    );
+  };
+
+  const getContactForms = async () => {
+    const contactForms = await fetcher("/contact", "GET");
+    setContactForms(
+      contactForms
     );
   };
 
@@ -51,12 +59,14 @@ function App() {
           await refreshUser(result);
           getPosts();
           getUsers();
+          getContactForms();
           getSettings();
         }
       });
     }
     getPosts();
     getUsers();
+    getContactForms();
     getSettings();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [!!user]);
@@ -103,6 +113,7 @@ function App() {
                 getUsers={getUsers}
                 settings={settings}
                 setSettings={setSettings}
+                contactForms={contactForms}
               />
             }
           />
