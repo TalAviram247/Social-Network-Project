@@ -24,4 +24,15 @@ describe("Contact Routes", () => {
     expect(data.email).to.equal("test@example.com");
     expect(data.message).to.equal("Test Message");
   });
+
+  it("should get all contact forms", async () => {
+    const response = await fetch("http://localhost:3001/contact", {
+      method: "GET",  
+    });
+
+    const contactForms = await response.json();
+    expect(response.status).to.equal(200);
+    expect(contactForms).to.be.an("array");
+    expect(contactForms.length).to.greaterThan(1);
+  });
 });
