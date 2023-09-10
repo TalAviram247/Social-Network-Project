@@ -62,7 +62,7 @@ export const Contact = () => {
         <br></br>
 
         <TextField
-          label="Title"
+          label="Message"
           className="input"
           rows={6}
           multiline

@@ -39,6 +39,14 @@ export default function TopBar() {
           style={showIfLoggedIn}
         />
         <Tab
+          key="Users"
+          label="Users"
+          value="/users"
+          to="/users"
+          component={Link}
+          style={showIfLoggedIn}
+        />
+        <Tab
           label="About"
           value="/about"
           to="/about"
@@ -53,14 +61,7 @@ export default function TopBar() {
           style={showIfLoggedIn}
         />
         <Tab label="Read me" value="/readme" to="/readme" component={Link} />
-        <Tab
-          key="Users"
-          label="Users"
-          value="/users"
-          to="/users"
-          component={Link}
-          style={showIfLoggedIn}
-        />
+        
         <Tab
           key="Logout"
           label="Logout"
