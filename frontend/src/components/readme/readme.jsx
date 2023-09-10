@@ -16,7 +16,7 @@ export const Readme = () => {
       <h1 className="title">Read me</h1>
       <Box width={500} py={3}>
         <br />
-        <h2>Social Network Name</h2>
+        <h4>Social Network Name</h4>
         <br />
         <div>
           <p>VirtualHub</p>
