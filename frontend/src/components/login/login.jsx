@@ -86,7 +86,7 @@ const Login = () => {
   return (
     <div id="login">
       <form className="form">
-        <div className="title">Welcome</div>
+        <div className="title">Welcome To VirtualHub</div>
         <TextField
           label="Username"
           className="input"
